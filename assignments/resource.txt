@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.6, pytest-7.3.1, pluggy-1.0.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/gs-3922
+collecting ... collected 1 item
+
+test_usage.py::test_resource_usage FAILED                                [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_resource_usage ______________________________
+
+virtual_memory_usage = 54.7, cpu_usage = 50.0
+
+    @pytest.mark.resource
+    def test_resource_usage(virtual_memory_usage, cpu_usage):
+>       assert virtual_memory_usage < 20
+E       assert 54.7 < 20
+
+test_usage.py:6: AssertionError
+=============================== warnings summary ===============================
+test_usage.py:4
+  /home/gs-3922/test_usage.py:4: PytestUnknownMarkWarning: Unknown pytest.mark.resource - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.resource
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_usage.py::test_resource_usage - assert 54.7 < 20
+========================= 1 failed, 1 warning in 0.02s =========================
