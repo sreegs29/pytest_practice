@@ -11,12 +11,12 @@ test_usage.py::test_resource_usage FAILED                                [100%]
 =================================== FAILURES ===================================
 _____________________________ test_resource_usage ______________________________
 
-virtual_memory_usage = 31.4, cpu_usage = 33.3
+virtual_memory_usage = 31.8, cpu_usage = 100.0
 
     @pytest.mark.resource
     def test_resource_usage(virtual_memory_usage, cpu_usage):
 >       assert virtual_memory_usage < 20
-E       assert 31.4 < 20
+E       assert 31.8 < 20
 
 test_usage.py:6: AssertionError
 =============================== warnings summary ===============================
@@ -26,5 +26,5 @@ test_usage.py:4
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 =========================== short test summary info ============================
-FAILED test_usage.py::test_resource_usage - assert 31.4 < 20
-========================= 1 failed, 1 warning in 0.02s =========================
+FAILED test_usage.py::test_resource_usage - assert 31.8 < 20
+========================= 1 failed, 1 warning in 0.05s =========================
